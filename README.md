@@ -8,4 +8,4 @@ Webhook to Service Bus Queue, permissions can be handled in the Azure Function b
 
 ## Application settings
 
-- **ServiceBus** - Service Bus, where queue will be created.
+- **ServiceBus** - Service Bus, where queue will be created. - by ashok
