@@ -15,7 +15,7 @@
       "name": "res"
     },
     {
-      "queueName": "cs-alert",
+      "queueName": "cs-alert-queue",
       "name": "out",
       "type": "serviceBus",
       "direction": "out",
