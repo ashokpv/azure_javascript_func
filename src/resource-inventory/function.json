@@ -1,0 +1,32 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "serviceBus",
+      "connection": "sbGovernance_RootManageSharedAccessKey_SERVICEBUS",
+      "name": "out",
+      "queueName": "testqueue",
+      "accessRights": "Manage",
+      "direction": "out"
+    },
+    {
+      "type": "serviceBus",
+      "connection": "sbGovernance_RootManageSharedAccessKey_SERVICEBUS",
+      "name": "output",
+      "accessRights": "Manage",
+      "direction": "out",
+      "queueName": "activityqueue"
+    }
+  ],
+  "disabled": false
+}
