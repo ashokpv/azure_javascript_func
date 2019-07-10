@@ -1,0 +1,28 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post",
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "queueName": "service-now-queue",
+      "name": "out",
+      "type": "serviceBus",
+      "direction": "out",
+      "connection": "ServiceBus",
+      "accessRights": "Manage"
+    }
+  ],
+  "disabled": false
+}

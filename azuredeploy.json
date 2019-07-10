@@ -21,11 +21,18 @@
             "metadata": {
                 "description": "Name of queue to populate."
             }
+        },
+	"servicebusNamespace": {
+            "type": "string",
+            "defaultValue": "CloudGovernance",
+            "metadata": {
+                "description": "Name of Service Namespace to Create."
+            }
         }
     },
     "variables": {
         "sbVersion": "2015-08-01",
-        "serviceBusNamespaceName": "[concat('sb', 'Governance')]",
+        "serviceBusNamespaceName": "[parameters('servicebusNamespace')]",
         "defaultSASKeyName": "RootManageSharedAccessKey",
         "authRuleResourceId": "[resourceId('Microsoft.ServiceBus/namespaces/authorizationRules', variables('serviceBusNamespaceName'), variables('defaultSASKeyName'))]",
         "storageName": "[concat('function', uniqueString(parameters('siteName')))]",
